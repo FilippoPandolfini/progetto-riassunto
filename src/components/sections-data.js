@@ -1,50 +1,53 @@
+import { dataStructuresData } from "../pages/data-structures-data";
+import { lambdaData } from "../pages/lambda-data";
+import { multithreadingData } from "../pages/multithreading-data";
+import { objectOrientedData } from "../pages/object-oriented-data";
+import { reactData } from "../pages/react-data";
+
 export const sectionsData = [
   {
     id: "datastructure",
     title: "Strutture dati e collezioni",
     content: "Array, Array List, String, Generics.",
-    href: "/datastructure.jsx"
+    subPanels: dataStructuresData,
   },
   {
     id: "objoriented",
     title: "Programmazione orientata agli oggetti",
-    content: "Polimorfismo, Tipo Primitivo, Tipo (?).",
-    href: "/objoriented.jsx"
+    content: "Polimorfismo, Tipo Primitivo, Tipo Oggetto, Tipo Array, Tipo Funzione, Tipo Null, Tipo Symbol, Tipo Bigint.",
+    subPanels: objectOrientedData,
   },
   {
     id: "lambda",
     title: "Programmazione funzionale e lambda",
     content: "Lambda, Method reference.",
-    href: "/lambda.jsx"
+    subPanels: lambdaData,
   },
 {
     id: "multithreading",
     title: "Programmazione concorrente e multithreading",
     content: "Thread, Single-thread, Multithreading, Stream, Parallel Stream.",
-    href: "/multithreading.jsx"
+    subPanels: multithreadingData,
   },
   {
     id: "react",
     title: "React e Web Development",
     content: "Hook.",
-    href: "/react.jsx"
+    subPanels: reactData
   },
   {
     id: "database",
     title: "Database e SQL",
     content: "SQL, Rapporti tra dati in un database, Chiavi.",
-    href: "/database.jsx"
   },
   {
     id: "networking",
     title: "Sicurezza e rete",
     content: "SSH.",
-    href: "/networking.jsx"
   },
   {
     id: "metadati",
     title: "Metadati e documentazione",
     content: "Annotazioni, API.",
-    href: "/metadati.jsx"
   }
 ];

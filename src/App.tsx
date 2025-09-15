@@ -1,16 +1,31 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Panel from './components/panel'
 import SectionsRenderer from './components/section-renderer';
 import { sectionsData } from './components/sections-data';
+import { dataStructuresData } from './pages/data-structures-data';
+import { objectOrientedData } from './pages/object-oriented-data';
+import { lambdaData } from './pages/lambda-data';
+import { multithreadingData } from './pages/multithreading-data';
+import { reactData } from './pages/react-data';
+
+interface MenuItem {
+  id: string;
+  title: string;
+}
+
+interface SubMenu {
+  id: string;
+  title: string;
+}
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [activePanel, setActivePanel] = useState(null)
-  const [isMobile, setIsMobile] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>('hero');
+  const [activePanel, setActivePanel] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
 
-  const navigate = (path) => {
+  const navigate = (path: string) => {
     window.history.pushState({}, '', path);
     setCurrentPage(path);
   };
@@ -57,7 +72,7 @@ export default function App() {
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -65,9 +80,32 @@ export default function App() {
     }
   }
 
-  const menuItems = [
-    ...sectionsData.map(section => ({ id: section.id, title: section.title }))
-  ];
+  const menuItems: MenuItem[] = sectionsData.map(section => ({
+    id: section.id,
+    title: section.title
+  }));
+
+  const subMenu: SubMenu[] = [
+    ...dataStructuresData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...objectOrientedData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...lambdaData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...multithreadingData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...reactData.map(section => ({
+      id: section.id,
+      title: section.title
+    }))];
 
   return (
     <>
@@ -106,8 +144,10 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" style={{ minHeight: "100vh", padding: "140px" }}>
-        <SectionsRenderer sections={sectionsData} />
+      <section id="hero">
+        <div className='hero-content'>
+          <SectionsRenderer sections={sectionsData} isMobile={isMobile} />
+        </div>
       </section>
     </>
   )

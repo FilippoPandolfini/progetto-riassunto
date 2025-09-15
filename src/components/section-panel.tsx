@@ -1,13 +1,22 @@
 import React from "react";
 import Panel from "./panel";
+import { BasePanelProps } from "./panel-types";
 
-const SectionPanel = ({ id, title, content, height = 300, width = 400, onClick }) => {
+const SectionPanel: React.FC<BasePanelProps> = ({
+    id,
+    title,
+    content,
+    height = 300,
+    width = 400,
+    onClick
+}) => {
     return (
         <section id={id}>
             <Panel
                 height={height}
                 width={width}
-                onClick={onClick}>
+                onClick={onClick}
+            >
                 <h2>{title}</h2>
                 <p>{content}</p>
             </Panel>
