@@ -12,6 +12,7 @@ import { networkingData } from './pages/networking-data';
 import { metadataData } from './pages/metadata-data';
 import { introduzioneData } from './introduzione-data';
 import { title } from 'process';
+import { javavstypeData } from './pages/javavstype-data';
 
 interface MenuItem {
   id: string;
@@ -96,6 +97,7 @@ export default function App() {
     lambdaData,
     multithreadingData,
     reactData,
+    javavstypeData,
     databaseData,
     networkingData,
     metadataData

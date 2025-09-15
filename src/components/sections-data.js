@@ -6,6 +6,7 @@ import { multithreadingData } from "../pages/multithreading-data";
 import { networkingData } from "../pages/networking-data";
 import { objectOrientedData } from "../pages/object-oriented-data";
 import { reactData } from "../pages/react-data";
+import { javavstypeData } from "../pages/javavstype-data";
 
 export const sectionsData = [
   {
@@ -26,7 +27,7 @@ export const sectionsData = [
     content: "Lambda, Method reference.",
     subPanels: lambdaData,
   },
-{
+  {
     id: "multithreading",
     title: "Programmazione concorrente e multithreading",
     content: "Thread, Single-thread, Multithreading, Stream, Parallel Stream, Concorrenza, Sincronizzazione, Deadlock.",
@@ -37,6 +38,12 @@ export const sectionsData = [
     title: "React e Web Development",
     content: "React, Hook, DOM, Componenti Funzionali, JSX, Props, State, Effect, Ref.",
     subPanels: reactData
+  },
+  {
+    id: "javavstype",
+    title: "JavaScript vs TypeScript",
+    content: "Javascript, TypeScript, JSX e TSX.",
+    subPanels: javavstypeData
   },
   {
     id: "database",
