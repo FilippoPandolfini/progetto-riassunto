@@ -6,12 +6,13 @@ const SectionPanel: React.FC<BasePanelProps> = ({
     id,
     title,
     content,
+    sample,
     height = 300,
     width = 400,
     onClick
 }) => {
     return (
-        <section id={id}>
+        <section id={id} className="section-panel">
             <Panel
                 height={height}
                 width={width}

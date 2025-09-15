@@ -17,7 +17,8 @@ export const multithreadingData = [
     {
         id:"stream",
         title:"Stream",
-        content:"Un flusso di dati su cui è possibile applicare operazioni di trasformazione, filtraggio e aggregazione. \n\n· Non memorizza dati. \n· Consente uno stile di programmazione dichiarativo (tipo SQL) sulle collezioni di dati. \nEs: list.stream().filter(x -> x > 10).map(x -> x * 2)"
+        content:"Un flusso di dati su cui è possibile applicare operazioni di trasformazione, filtraggio e aggregazione. \n\n· Non memorizza dati. \n· Consente uno stile di programmazione dichiarativo (tipo SQL) sulle collezioni di dati.",
+        sample: "Es: list.stream().filter(x -> x > 10).map(x -> x * 2)"
     },
     {
         id:"parallelstream",

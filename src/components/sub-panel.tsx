@@ -10,6 +10,7 @@ const SubPanel: React.FC<SubPanelProps> = ({
     id,
     title,
     content,
+    sample,
     height,
     width,
     onClick,
@@ -28,7 +29,8 @@ const SubPanel: React.FC<SubPanelProps> = ({
             style={{ background: "#444" }}
         >
             <h3>{title}</h3>
-            <p>{content}</p>
+            <p className="content">{content}</p>
+            <p className="sample">{sample}</p>
         </Panel>
     )
 }

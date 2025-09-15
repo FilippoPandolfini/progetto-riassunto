@@ -20,6 +20,7 @@ export default function SectionsRenderer({ sections, isMobile }: { sections: Sec
                     id={sections.id}
                     title={sections.title}
                     content={sections.content}
+                    sample={sections.sample}
                     onClick={() => sections.subPanels && setSelectedSection(sections.id)}
                 />
             ))}
@@ -77,6 +78,7 @@ export default function SectionsRenderer({ sections, isMobile }: { sections: Sec
                                 id={sub.id}
                                 title={sub.title}
                                 content={sub.content}
+                                sample={sub.sample}
                                 isMobile={isMobile}
                             />
                         ))}

@@ -7,6 +7,9 @@ import { objectOrientedData } from './pages/object-oriented-data';
 import { lambdaData } from './pages/lambda-data';
 import { multithreadingData } from './pages/multithreading-data';
 import { reactData } from './pages/react-data';
+import { databaseData } from './pages/database-data';
+import { networkingData } from './pages/networking-data';
+import { metadataData } from './pages/metadata-data';
 
 interface MenuItem {
   id: string;
@@ -105,6 +108,18 @@ export default function App() {
     ...reactData.map(section => ({
       id: section.id,
       title: section.title
+    })),
+    ...databaseData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...networkingData.map(section => ({
+      id: section.id,
+      title: section.title
+    })),
+    ...metadataData.map(section => ({
+      id: section.id,
+      title: section.title
     }))];
 
   return (
@@ -146,6 +161,26 @@ export default function App() {
       {/* Hero Section */}
       <section id="hero">
         <div className='hero-content'>
+          <div className='introduzione'>
+            <h2>Introduzione</h2>
+            <h3>Java è un linguaggio di programmazione ad alto livello, orientato agli oggetti e multipiattaforma.</h3>
+            <li>
+              Ha una sintassi simile al C/C++, ma con gestione automatica della memoria tramite garbage collection.
+            </li>
+            <li>
+              È orientato agli oggetti.
+            </li>
+            <li>
+              È multipiattaforma. Grazie alla JVM, lo stesso programma può girare su diversi sistemi operativi senza modifiche.
+            </li>
+            <li>
+              Ha una tipizzazione forte: ogni variabile è un tipo definito e il compilatore controlla la correttezza dei tipi.
+            </li>
+            <li>
+              È progettato per ridurre gli errori comuni legati a puntatori e gestione della memoria.
+            </li>
+            <p>In questo mini progetto ho cercato di cogliere e inserire alcune delle nozioni più importanti circa Java e la programmazione.</p>
+          </div>
           <SectionsRenderer sections={sectionsData} isMobile={isMobile} />
         </div>
       </section>

@@ -1,6 +1,9 @@
 import { dataStructuresData } from "../pages/data-structures-data";
+import { databaseData } from "../pages/database-data";
 import { lambdaData } from "../pages/lambda-data";
+import { metadataData } from "../pages/metadata-data";
 import { multithreadingData } from "../pages/multithreading-data";
+import { networkingData } from "../pages/networking-data";
 import { objectOrientedData } from "../pages/object-oriented-data";
 import { reactData } from "../pages/react-data";
 
@@ -26,28 +29,31 @@ export const sectionsData = [
 {
     id: "multithreading",
     title: "Programmazione concorrente e multithreading",
-    content: "Thread, Single-thread, Multithreading, Stream, Parallel Stream.",
+    content: "Thread, Single-thread, Multithreading, Stream, Parallel Stream, Concorrenza, Sincronizzazione, Deadlock.",
     subPanels: multithreadingData,
   },
   {
     id: "react",
     title: "React e Web Development",
-    content: "Hook.",
+    content: "React, Hook, DOM, Componenti Funzionali, JSX, Props, State, Effect, Ref.",
     subPanels: reactData
   },
   {
     id: "database",
     title: "Database e SQL",
-    content: "SQL, Rapporti tra dati in un database, Chiavi.",
+    content: "SQL, Rapporti tra dati in un database, Chiavi, DDL, DML, DCL, TCL, Constraints, Index, Normalizzazione, Denormalizzazione, View, Stored Procedure & Trigger, Transazione, JOIN.",
+    subPanels: databaseData
   },
   {
     id: "networking",
     title: "Sicurezza e rete",
-    content: "SSH.",
+    content: "SSH, HTTPS, TLS/SSL, VPN, Firewall, Proxy, 2FA, Hashing, Crittografia simmetrica e asimmetrica, Port, DNS, Attacchi comuni.",
+    subPanels: networkingData
   },
   {
     id: "metadati",
-    title: "Metadati e documentazione",
-    content: "Annotazioni, API.",
+    title: "API, metadati e documentazione",
+    content: "API, REST API, Javadoc, Annotazioni, Commenti, Metadata, OpenAPI, Versioning, .",
+    subPanels: metadataData
   }
 ];

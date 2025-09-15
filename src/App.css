@@ -140,6 +140,23 @@ p {
   white-space: pre-line;
 }
 
+h3 {
+  font-weight: bolder;
+}
+
+.sample {
+  font-size: 14px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.content {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
 @media (max-width: 768px) {
   #hero {
     padding: 100px 0;
