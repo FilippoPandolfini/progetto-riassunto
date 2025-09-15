@@ -15,13 +15,13 @@ export const metadataData = [
         id:"javadoc",
         title:"Javadoc",
         content:"Strumento di Java per generare documentazione leggibile a partire da commenti strutturati nel codice.",
-        sample:"Es. /** ... */"
+        sample:"Es: \n/** ... */"
     },
     {
         id:"annotation",
         title:"Annotazioni",
         content:"Appunti inseriti nel codice per specificare particolarità di classi, metodi o attributi. \nPossono influenzare la compilazione, il runtime o la configurzione.",
-        sample:"Es: @Override, @Autowired"
+        sample:"Es: \n@Override, @Autowired"
     },
     {
         id:"comment",

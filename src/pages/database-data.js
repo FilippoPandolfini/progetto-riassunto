@@ -18,25 +18,25 @@ export const databaseData = [
         id: "ddl",
         title: "DDL",
         content: "Data Definition Language. \nComandi SQL per definire la struttura del database.",
-        sample: "Es: CREATE, ALTER, DROP."
+        sample: "Es: \nCREATE, ALTER, DROP."
     },
     {
         id: "dml",
         title: "DML",
         content: "Data Manipulation Language. \nComandi SQL per gestire i dati.",
-        sample: "Es: INSERT, UPDATE, DELETE, SELECT."
+        sample: "Es: \nINSERT, UPDATE, DELETE, SELECT."
     },
     {
         id: "dcl",
         title: "DCL",
         content: "Data Control Language. \nComandi per permessi e sicurezza.",
-        sample: "Es: GRANT, REVOKE."
+        sample: "Es: \nGRANT, REVOKE."
     },
     {
         id: "tcl",
         title: "TCL",
         content: "Transaction Control Language. \nComandi per transazioni.",
-        sample: "Es: COMMIT, ROLLBACK, SAVEPOINT."
+        sample: "Es: \n COMMIT, ROLLBACK, SAVEPOINT."
     },
     {
         id: "constraints",

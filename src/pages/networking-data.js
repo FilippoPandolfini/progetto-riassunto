@@ -33,31 +33,31 @@ export const networkingData = [
         id:"twofactor",
         title:"Autenticazione a due fattori (2FA)",
         content:"Doppio livello di sicurezza.",
-        sample:"Es: password + token/sms/app."
+        sample:"Es: \nPassword + token/sms/app."
     },
     {
         id:"hashing",
         title:"Hashing",
         content:"Trasformazione unidirezionale dei dati in valori fissi. \nNon reversibile.",
-        sample:"Es: password → MD5, SHA."
+        sample:"Es: \nPassword → MD5, SHA."
     },
     {
         id:"symcrypt",
         title:"Crittografia simmetrica",
         content:"Stessa chiave per cifrare/decifrare.",
-        sample:"Es: AES, DES."
+        sample:"Es: \nAES, DES."
     },
     {
         id:"asymcrypt",
         title:"Crittografia asimmetrica",
         content:"Coppia di chiavi pubblica/privata",
-        sample:"Es: RSA, ECC."
+        sample:"Es: \nRSA, ECC."
     },
     {
         id:"port",
         title:"Port",
         content:"\"Porta logica\" che identifica un servizio di rete su una macchina.",
-        sample:"Es: 22 → SSH, \n80 → HTTP, \n443 → HTTPS."
+        sample:"Es: \n22 → SSH, \n80 → HTTP, \n443 → HTTPS."
     },
     {
         id:"dns",

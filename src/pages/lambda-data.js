@@ -3,7 +3,7 @@ export const lambdaData = [
         id: "lambda",
         title: "Lambda",
         content: "Espressioni compatte per scrivere codice più leggibile.",
-        sample: "Es: (parametri) -> { istruzioni }",
+        sample: "Es: \n(parametri) -> { istruzioni }",
     },
     {
         id: "methodref",
