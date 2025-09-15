@@ -62,7 +62,7 @@ export default function SectionsRenderer({ sections, isMobile }: { sections: Sec
                         </button>
 
                     {/*Contenitore dei sub-panel*/}
-                    <div
+                    <div className="sub-panel"
                         style={{
                             position: "relative",
                             overflowY: "auto",

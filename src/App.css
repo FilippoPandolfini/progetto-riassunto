@@ -11,6 +11,7 @@ body {
 .navbar .logo img {
   width: 80px;
   height: auto;
+  content: url('public/images/logo.png');
 }
 
 .navbar .logo p {
@@ -71,21 +72,19 @@ body {
 
 /* Lista menu */
 .menu-list {
-    flex-direction: column;
-    display: flex;
-    position: static;
-    flex-direction: row;
-    top: 60px;
-    background-color: #333;
-    background: none;
-    padding: 15px 20px;
-    border-radius: 5px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    gap: 10px;
-  }
+  display: flex;
+  flex-direction: row;
+  top: 60px;
+  background-color: #333;
+  background: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  gap: 10px;
+}
 
 .menu-list.active {
   opacity: 1;
@@ -113,6 +112,10 @@ section,
 
 .panel {
   margin: 40px auto;
+}
+
+.sub-panel {
+  margin-bottom: 190px;
 }
 
 #hero {
@@ -192,6 +195,35 @@ h3 {
   color: #12c4d5;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .navbar,
+  .footer,
+  .menu-list.active {
+    background-color: #12c4d5;
+  }
+
+  .navbar .logo img {
+    content: url('public/images/logo-dark.png')
+  }
+
+  #hero {
+    background-color: black;
+  }
+
+  .nav-button {
+    color: #12c4d5;
+    background-color: #333;
+  }
+
+  .nav-button.active {
+    color: white;
+    background-color: #5c5c5c;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+}
+
 @media (max-width: 768px) {
   #hero {
     padding: 100px 0 50px 0;
@@ -203,23 +235,19 @@ h3 {
   }
 
   .menu-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  background-color: #333333;
-  padding: 20px;
-  border-radius: 0 0 0px 20px;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  max-height: 90vh;
-  max-width: 45vh;
-  overflow-y: auto;
+    list-style: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 0 0 0px 20px;;
+    transform: translateY(-10px);
+    max-height: 90vh;
+    max-width: 60%;
+    overflow-y: auto;
   }
 
   .introduzione {
@@ -228,7 +256,7 @@ h3 {
     text-align: justify;
   }
 
-  .introduzione ul {
-    padding-right: 30px;
+  .sub-panel {
+    margin-bottom: 150px;
   }
 }
