@@ -1,4 +1,5 @@
 import React, { CSSProperties, ReactNode, useState, useRef } from "react";
+import "./panel.css";
 
 export interface PanelProps {
     id?: string;
@@ -31,48 +32,17 @@ const Panel: React.FC<PanelProps> = ({
         <div
             id={id}
             ref={elementRef}
-            className={`panel ${className}`}
-            style={{
-                position: "relative",
-                borderRadius: `${borderRadius}px`,
-                overflow: "hidden",
-                cursor: onClick && !disabled ? "pointer" : "default",
-                width,
-                height,
-                background: "#333",
-                color: "white",
-                /*boxShadow: isHovered
-                    ? "0px 8px 20px rgba(0,0,0,0.3)"
-                    : "0px 4px 12px rgba(0,0,0,0.15)",*/
-                transition: "all 0.3s ease-in-out",
-                ...style,
-            }}
+            className={`panel ${disabled ? "disabled" : ""} ${className}`}
+            style={{ width, height, borderRadius }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={!disabled ? onClick : undefined}
         >
             {/* Border */}
-            <div style={{
-                position: "absolute",
-                inset: "0px",
-                borderRadius: `${borderRadius}px`,
-                border: `1px solid rgba(255, 255, 255, ${isHovered ? 0.4 : 0.2})`,
-                pointerEvents: "none",
-            }}
-            />
+            <div className="panel-border" style={{ borderRadius }} />
 
             {/* Content */}
-            <div
-                style={{
-                    position: "relative",
-                    zIndex: 1,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "20px",
-                    textAlign: "center"
-                }}>
+            <div className="panel-content">
                 {children}
             </div>
         </div>

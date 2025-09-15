@@ -221,6 +221,7 @@ h3 {
 
   .nav-button.active {
     color: white;
+    transition: 200ms;
     background-color: #5c5c5c;
     font-weight: bold;
     border-bottom: 2px solid white;
