@@ -53,7 +53,7 @@ export const sectionsData = [
   {
     id: "metadati",
     title: "API, metadati e documentazione",
-    content: "API, REST API, Javadoc, Annotazioni, Commenti, Metadata, OpenAPI, Versioning, .",
+    content: "API, REST API, Javadoc, Annotazioni, Commenti, Metadata, OpenAPI, Versioning.",
     subPanels: metadataData
   }
 ];
