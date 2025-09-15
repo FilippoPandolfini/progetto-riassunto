@@ -11,8 +11,8 @@ import { databaseData } from './pages/database-data';
 import { networkingData } from './pages/networking-data';
 import { metadataData } from './pages/metadata-data';
 import { introduzioneData } from './introduzione-data';
-import { title } from 'process';
 import { javavstypeData } from './pages/javavstype-data';
+import { javaData } from './pages/java-data';
 
 interface MenuItem {
   id: string;
@@ -92,6 +92,7 @@ export default function App() {
   }));
 
   const datasets = [
+    javaData,
     dataStructuresData,
     objectOrientedData,
     lambdaData,

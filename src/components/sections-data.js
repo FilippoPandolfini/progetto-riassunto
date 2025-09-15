@@ -7,19 +7,26 @@ import { networkingData } from "../pages/networking-data";
 import { objectOrientedData } from "../pages/object-oriented-data";
 import { reactData } from "../pages/react-data";
 import { javavstypeData } from "../pages/javavstype-data";
+import { javaData } from "../pages/java-data";
 
 export const sectionsData = [
   {
-    id: "datastructure",
-    title: "Strutture dati e collezioni",
-    content: "Array, Array List, String, Generics.",
-    subPanels: dataStructuresData,
+    id:"languages",
+    title:"Linguaggi",
+    content:"Linguaggio compilato, linguaggio interpretato ed esempi ibridi.",
+    subPanels: javaData,
   },
   {
     id: "objoriented",
     title: "Programmazione orientata agli oggetti",
-    content: "Polimorfismo, Tipo Primitivo, Tipo Oggetto, Tipo Array, Tipo Funzione, Tipo Null, Tipo Symbol, Tipo Bigint.",
+    content: "ORM, Variabili, Tipo Primitivo, Tipo Oggetto, Tipo Array, Tipo Funzione, Tipo Null, Tipo Symbol, Tipo Bigint, String, Wrapper Classes, Polimorfismo.",
     subPanels: objectOrientedData,
+  },
+  {
+    id: "datastructure",
+    title: "Strutture dati e collezioni",
+    content: "Array, Array List, Iterator, Overloaded Method, Inheritance, Modificatori di accesso, Super, Incapsulamento, Getter e Setter, Costruttore di copia, Interfacce, Generics.",
+    subPanels: dataStructuresData,
   },
   {
     id: "lambda",
